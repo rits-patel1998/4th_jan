@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <script src="challange1.js"></script> -->
+
+</head>
+<body>
+	<h1 align="center">Table Data</h1>
+	
+
+	<div id="iii"></div>
+	<script>
+		var no=[1,2,3,4];
+		
+		var nam=new Array("Ritu","Shubham","Vir","Kunjan");
+		console.log(nam.length);
+
+			// for (var i = 0; i < nam.length && i<no.length; i++) {
+			// 	console.log(no[i]);
+			// 	console.log(nam[i]);
+			// }
+
+			var table="<table border='3' align='center'><tr><th>No</th><th>Name</th></tr>";
+			for (var i = 0; i < nam.length && i<no.length; i++) {
+				
+				
+				table+="<tr><td>"+no[i]+"</td><td>"+nam[i]+"</td></tr>";
+			}
+			table+="</table>";
+			document.getElementById("iii").innerHTML = table;
+		
+	</script>
+	 
+</body>
+</html>

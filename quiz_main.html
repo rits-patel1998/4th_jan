@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+	
+</head>
+<html>
+<body>
+	<h1 >Quiz</h1>
+	<div>
+		<h4>1. "Who is the strongest?"</h4><br>
+		<input type="radio" name="first" value="superman">Superman<br>
+		<input type="radio" name="first" value="theTerminator">The terminator<br>
+		<input type="radio" name="first" value="waluigi">Waluigi<br>
+		
+
+		<h4>2. "What is the capital of India?"</h4><br>
+		<input type="radio" name="second" value="gandhinager">Gandhinagar<br>
+		<input type="radio" name="second" value="delhi">Delhi<br>
+		<input type="radio" name="second" value="srinagar">Srinagar<br>
+		
+		<h4>3. "what is the answer of 5+2?"</h4><br>
+		<input type="radio" name="third" value="seven">Seven<br>
+		<input type="radio" name="third" value="three">Three<br>
+		<input type="radio" name="third" value="ten">Ten<br>
+		
+		<input type="submit" name="submit" onclick="displayResult()" value="Submit QUIZ">
+
+	</div>
+
+	<script type="text/javascript">
+		
+		function displayResult (){
+			var cnt=0;
+			var radio1=document.getElementsByName('first');
+			console.log(radio1);
+			for (var i = 0; i < radio1.length; i++) {
+				
+				if (radio1[i].checked ) {
+					if (radio1[i].value=='waluigi') {
+						console.log(radio1[i].value) ;
+						cnt++;
+					}
+				}
+
+			}
+			var radio2=document.getElementsByName('second');
+			console.log(radio2);
+			for (var i = 0; i < radio2.length; i++) {
+				
+				if (radio2[i].checked) {
+					if (radio2[i].value=='delhi') {
+						console.log(radio2[i].value) ;
+						cnt++;
+					}
+				}
+
+			}
+
+			var radio3=document.getElementsByName('third');
+			console.log(radio3);
+			for (var i = 0; i < radio3.length; i++) {
+				
+				if (radio3[i].checked) {
+					if (radio3[i].value=='seven') {
+						console.log(radio3[i].value) ;
+						cnt++;
+					}
+				}
+
+			}
+			console.log(cnt);
+			if (cnt==0) {
+				alert('You lost...Your score is :'+cnt);
+			}
+			else if (cnt==3) {
+				alert('You won the quiz');
+
+			}
+
+			else {
+				alert('Your score is :'+cnt);
+
+			}
+		}	
+
+			// && radio3[i].value=='seven'
+//&& radio2[i].value=='waluigi'
+// && radio2[i].value=='delhi'
+		
+	</script>
+	</body>
+</html>
